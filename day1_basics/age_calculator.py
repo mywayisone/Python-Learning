@@ -2,5 +2,5 @@
 
 current_year = 2025
 
-birth_year = int(input("Enter your birth year: "))
-print(f"Your age is {current_year - birth_year}")
+birth_year = input("Enter your birth year: ")
+print(f"Your age is {current_year - birth_year}") if birth_year.isdigit() else print("Enter a valid year") 
