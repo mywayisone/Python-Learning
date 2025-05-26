@@ -1,0 +1,5 @@
+name = input("Enter your name for a brief summary: ")
+print("Hello!",  name)
+age = int(input("Enter your age: "))
+country = input("Enter your country: ")
+print(f"I am {name} by name, {age} years of age, and my natiionality is {country}. Thanks!")
