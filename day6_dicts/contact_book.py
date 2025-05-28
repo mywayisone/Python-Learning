@@ -6,14 +6,6 @@
 # - Delete contact
 # - Exit
 
-# contact = {
-#     "001" : {"name" : "Kayode Oluwasegun", "phone" : "08065942879"},
-#     "002" : {"name" : "Oluwabunmi", "phone" : "08102724256"},
-# }
-
-# contact["003"] = {"name" : "Olakunle Benjamin", "phone" : "08040554435"}
-# print(contact.values())
-
 # Show all menu
 def show_menu():
     print("1. Add new contact (name, phone): ")
