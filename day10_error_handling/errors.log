@@ -1,0 +1,2 @@
+ERROR:root:An error occured: invalid literal for int() with base 10: 'a'
+ERROR:root:An error occured: division by zero
