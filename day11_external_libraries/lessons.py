@@ -79,3 +79,51 @@ except requests.exceptions.RequestException as e:
 #  - Run the script
 #  - Enter your GitHub username or mine: mywayisone
 #  - Try a fake username to test the error message
+
+
+# 🪄 PART 3: Using prettytable for Clean Tables in the Terminal
+# This library helps you display data in a neat, table-like format — perfect for CLI dashboards, reports, or summaries.
+
+# 📦 Step 1: Install prettytable
+#   - pip install prettytable
+
+# Let’s now upgrade your GitHub script to display the user data using PrettyTable.
+
+# 📄 New File: github_user_table.py
+# Here’s an improved version using prettytable:
+import requests
+from prettytable import PrettyTable
+
+username = input("Enter a GitHub username: ")
+url = f"https://api.github.com/users/{username}"
+
+try:
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+
+        table = PrettyTable()
+        table.field_names = ["Field", "Value"]
+        table.add_row(["Name", data.get("name")])
+        table.add_row(["Public Repos", data.get("public_repos")])
+        table.add_row(["Followers", data.get("followers")])
+        table.add_row(["Following", data.get("following")])
+        table.add_row(["Location", data.get("location")])
+        table.add_row(["Profile URL", data.get("html_url")])
+
+        print(table)
+    else:
+        print("❌ User not found.")
+except requests.exceptions.RequestException as e:
+    print("⚠️ Network error:", e)
+
+
+# 🧩 Mini Project: GitHub Profile Viewer (Console Dashboard)
+# You'll combine:
+
+# ✅ requests — to fetch GitHub data
+# ✅ prettytable — to format the output
+# ✅ colorama — to highlight parts of the interface
+
+# 📄 Create: github_profile_dashboard.py
+# Here's your full script:
