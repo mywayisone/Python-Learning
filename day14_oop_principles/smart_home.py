@@ -68,7 +68,7 @@ class SmartHome():
     # Define show_all_appliances() method
     def show_all_appliances(self):
         for appliance in self.appliances:
-            print(appliance.__class__.__name__) # object.__class__.__name__ returns the object class name.
+            print(f"{appliance.__class__.__name__} - {appliance.brand}") # object.__class__.__name__ returns the object class name.
 
 # Define the entry point
 def main():
