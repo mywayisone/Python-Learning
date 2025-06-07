@@ -122,3 +122,64 @@ print("Divide:", divide(10, 2))
 # - Copy the code snippets above into the right files.
 # - Run main.py and confirm it works.
 # - Push the folder to GitHub (day16_modules_packages).
+
+
+# ✅ Day 16 Continued: Deepening Your Understanding of Modules & Packages
+# You’ve already:
+# - Set up your package folder ✅
+# - Imported from modules ✅
+# - Pushed it to GitHub ✅
+
+# Now let’s finish up with the following:
+# - 📦 1. Add More Reusable Utilities
+# - Let’s extend your package with a new file:
+
+# Create: utils.py inside your package
+# utils.py
+def greet_user(name):
+    return f"Hello, {name}! Welcome back."
+
+def capitalize_words(text):
+    return " ".join(word.capitalize() for word in text.split())
+
+# Then import and use it in main.py:
+
+# from mypackage import utils
+
+# print(utils.greet_user("ade"))
+# print(utils.capitalize_words("python is awesome"))
+
+# 📘 2. Understand __init__.py
+# 🔹 What it does:
+# - Tells Python, “This is a package.”
+# - Can be empty, or contain code to run automatically
+# - Lets you simplify imports
+
+# Edit __init__.py to include:
+# from .basic_ops import add, subtract
+# from .utils import greet_user
+
+# Now in main.py you can do:
+# from mypackage import add, greet_user
+
+# print(add(5, 3))
+# print(greet_user("Sam"))
+
+# | Style              | Example                 | Use When                      |
+# | ------------------ | ----------------------- | ----------------------------- |
+# | Specific functions | `from math import sqrt` | Cleaner and controlled        |
+# | Whole module       | `import math`           | When using many functions     |
+# | Alias              | `import numpy as np`    | To shorten long names         |
+# | Wildcard (`*`)     | `from math import *`    | ⚠️ Avoid — pollutes namespace |
+
+
+# 🧪 What to Do Now
+# 1. 🔧 Add utils.py as above
+
+# 2. 🛠 Edit __init__.py to re-export functions
+
+# 3. ✅ Modify main.py to use the imports
+
+# 4. 🔄 Run main.py and verify output
+
+# 5. ⬆️ Push updates to GitHub
