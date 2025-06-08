@@ -1,0 +1,14 @@
+{
+    "name": "Kayode",
+    "grade": 75,
+    "subjects": [
+        "Mathematics",
+        "English",
+        "Economics",
+        "Geography",
+        "Physics",
+        "Chemistry",
+        "Agriculture",
+        "Biology"
+    ]
+}
