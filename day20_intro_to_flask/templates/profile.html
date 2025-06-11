@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+  <h1>Profile Page</h1>
+  <p>Name: {{ name }}</p>
+  <p>Age: {{ age }}</p>
+
+  {% if age >= 18 %}
+    <p>Status: Adult</p>
+  {% else %}
+    <p>Status: Underage</p>
+  {% endif %}
+{% endblock %}
