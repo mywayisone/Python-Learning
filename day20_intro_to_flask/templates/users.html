@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-  <h1>List Admin Users</h1>
+  <h1>List Users: {{users | length}} </h1>
   <ul>
     {% for user in users %}
       <li><strong>{{ user.name }}</strong> contact: {{ user.email }}, {% if user.is_admin %}Admin: ✅{% endif%} </li> 
