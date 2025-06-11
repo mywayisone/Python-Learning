@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1>List Admin Users</h1>
+  <ul>
+    {% for user in users %}
+      <li><strong>{{ user.name }}</strong> contact: {{ user.email }}, {% if user.is_admin %}Admin: ✅{% endif%} </li> 
+    {% endfor %}
+  </ul>
+{% endblock %}

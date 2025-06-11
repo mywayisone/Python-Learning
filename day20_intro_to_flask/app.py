@@ -4,7 +4,26 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    posts = [
+        {"title": "Flask Basics", "author": "John"},
+        {"title": "Understanding Jinja", "author": "Mary"},
+        {"title": "Web Dev with Python", "author": "Ada"},
+    ]
+    return render_template("index.html", posts=posts)
+
+@app.route("/users")
+def users():
+    users = [
+        {"name": "Kayode Segun", "email": "example@gmail.com", "is_admin" : False},
+        {"name": "Matthew King", "email": "example@gmail.com",  "is_admin": True},
+        {"name": "Gbenga Priest", "email": "example@gmail.com", "is_admin": True}, 
+    ]    
+    return render_template("users.html", users=users)
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html"), 404
+
 
 @app.route("/about")
 def about():

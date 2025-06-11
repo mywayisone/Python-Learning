@@ -1,8 +1,10 @@
 {% extends "base.html" %}
-
 {% block title %}Home{% endblock %}
-
 {% block content %}
-  <h1>Welcome to the Homepage!</h1>
-  <p>This is a Flask app using Jinja templates.</p>
+  <h1>Blog Posts</h1>
+  <ul>
+    {% for post in posts %}
+      <li><strong>{{ post.title }}</strong> by {{ post.author }}</li>
+    {% endfor %}
+  </ul>
 {% endblock %}
