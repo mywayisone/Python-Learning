@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>✅ Thank you, {{ name }}. Your message has been received!</p>
+<a href="{{ url_for('contact') }}">Back to contact form</a>
+{% endblock %}
