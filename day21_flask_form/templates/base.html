@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Contact App</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 2rem; }
+        form { max-width: 400px; margin: auto; }
+        input, textarea { width: 100%; margin-bottom: 1rem; padding: 0.5rem; }
+    </style>
+</head>
+<body>
+    <h1>📨 Contact Us</h1>
+    {% with messages = get_flashed_messages() %}
+#       {% if messages %}
+#         <ul>
+#         {% for msg in messages %}
+#           <li style="color: green;">{{ msg }}</li>
+#         {% endfor %}
+#         </ul>
+#       {% endif %}
+#     {% endwith %}
+    {% block content %}{% endblock %}
+</body>
+</html>
