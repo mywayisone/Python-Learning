@@ -17,6 +17,9 @@ def submit():
         flash("All fields are required!")
         redirect(url_for('contact'))
 
+    with open("messages.txt", "a") as f:
+        f.write(f"{name} | {email} | {message}\n")
+
     flash(f"Thank you {name}, we received your message.")
     return redirect(url_for("contact"))
 
