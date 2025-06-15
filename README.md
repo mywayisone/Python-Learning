@@ -1,6 +1,6 @@
 # Python Learning Journey
 
-This repository contains my daily practice and projects as I learn to become a job-ready Python developer.
+This repository contains daily practice and projects on the learning path to become a job-ready Python developer.
 
 - ✅ Daily exercises
 - 🧪 Mini projects
