@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+  <h2>✅ Message Sent!</h2>
+  <p>Thank you for contacting us. We'll get back to you shortly.</p>
+  <a href="{{ url_for('contact') }}" class="btn btn-secondary mt-3">Send Another Message</a>
+</div>
+{% endblock %}
