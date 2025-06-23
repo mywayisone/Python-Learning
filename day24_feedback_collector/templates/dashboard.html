@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>📊 Admin Dashboard</h2>
+  {% if feedbacks %}
+    <ul class="list-group">
+      {% for name, email, feedback in feedbacks %}
+        <li class="list-group-item">
+          <strong>{{ name }}</strong> ({{ email }})<br>
+          {{ feedback }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No feedback submitted yet.</p>
+  {% endif %}
+{% endblock %}
